@@ -9,4 +9,4 @@ Installation
 
 accounts.txt-Format:
 
-`username:password:games (seperated by a comma)`
+`username:password:game IDs seperated by a comma`
