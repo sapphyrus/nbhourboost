@@ -2,7 +2,7 @@ var Steam = require('steam');
 var fs = require('fs');
 
 var accounts = [];
-var delay = 50
+var delay = 50;
 
 fs.readFile('accounts.txt', 'utf-8', (err, data) => {
     if (err) throw err;
@@ -12,7 +12,7 @@ fs.readFile('accounts.txt', 'utf-8', (err, data) => {
         account[2] = account[2].split(",").map(function(game) {
 			return {
 				game_id: parseInt(game, 10)
-				};
+			};
 		});
         accounts.push(account);
     })
@@ -38,12 +38,12 @@ fs.readFile('accounts.txt', 'utf-8', (err, data) => {
             steamClient.on('logOnResponse', (logonResp) => {
                 if (logonResp.eresult == Steam.EResult.OK) {
 
-				
-                    steamFriends.setPersonaState(Steam.EPersonaState.Offline); // if you want to be online too, but not actually necessary
+                    steamFriends.setPersonaState(Steam.EPersonaState.Offline);
                     steamUser.gamesPlayed({
                         games_played: account[2]
                     });
-					console.log("[%s] - Active Games and status set. (%s)", account[0], JSON.stringify(account[2]));
+
+					console.log("[%s] - Active Games and online status set. (%s)", account[0], JSON.stringify(account[2]));
                 }
             });
 
