@@ -1,0 +1,1 @@
+username:password:game1,game2
