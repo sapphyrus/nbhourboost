@@ -1,0 +1,15 @@
+{
+  "name": "nbhourboost",
+  "version": "1.0.0",
+  "description": "",
+  "main": "client.js",
+  "dependencies": {
+    "steam": "^1.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sapphyrus",
+  "license": "ISC"
+}
